@@ -1,6 +1,7 @@
  import FeatureProductsItems from "../Component/FeatureProducts"
- 
- const HomeSection = ({searchItem}) => {
+  import ShoppingCategory from "../Component/ShopCategory"
+  import NewsLetterSection from "../Component/NewsLetter"
+ const HomeSection = ({searchItem,addCart,setAddCart}) => {
    
     return (
       <>
@@ -40,7 +41,14 @@
           </div>
         </div>
       </section>
-      <FeatureProductsItems searchItem={searchItem}/>
+       {/* Feature products */}
+        <FeatureProductsItems searchItem={searchItem} addCart={addCart}  setAddCart={setAddCart}/>
+
+        {/* shopCatigory */}
+        <ShoppingCategory />
+       
+         {/* NewsLetterSection */}
+         <NewsLetterSection />
       </>
       
     );

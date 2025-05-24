@@ -78,7 +78,52 @@
  }
  
   /* feature section */
-  .btn:hover{
+  .btn-hover:hover{
   background-color: black !important;
   color: white !important;
   }
+  .add-btn{
+    border: 1px solid black !important;
+  }
+
+ 
+/* newletter */
+.newletter{
+  background-color: rgb(123, 125, 126);
+  color: white !important;
+}
+.join{
+  color: #9bde26;
+}
+/* footer sec */
+.footer-bg{
+  background-color: rgb(41, 36, 36) !important;
+}
+.f-shop{
+  color: white !important;
+  
+}
+/* shopsection */
+.all-products{
+  background-color: #526138 !important;
+  color: white;
+}
+
+/* All product */
+/* .card-img-top {
+  width: 100%;
+}
+
+.description {
+  font-size: 14px;
+} */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* .card-body {
+  padding: 20px;
+} */

@@ -1,8 +1,15 @@
-import {  FaCartPlus } from "react-icons/fa";
+import { useState } from "react";
+import { FaSearch, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+const NavBarSection = ({ searchItem, setSearchItem,addCart }) => {
+  const [showSearchInput, setShowSearchInput] = useState(false);
+  
+  const handleSearchIconClick = () => {
+    setShowSearchInput(!showSearchInput);
+  };
 
-const NavBarSection = ({ searchItem, setSearchItem }) => {
   return (
+  <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container-fluid">
         {/* Brand on left */}
@@ -11,13 +18,26 @@ const NavBarSection = ({ searchItem, setSearchItem }) => {
         {/* Search and cart icons */}
         <div className="d-flex align-items-center gap-3 ms-auto order-lg-last">
           <div className="clickable-icon search-icon" role="button" tabIndex={0} aria-label="Search">
-            <input type="text" placeholder="search"
-            className="p-1" style={{ border: "none", boxShadow: "none" }} 
-               value={searchItem} onChange={((e)=>setSearchItem(e.target.value))}/>
+            <FaSearch onClick={handleSearchIconClick} />
+            {showSearchInput && (
+              <input
+                type="text"
+                placeholder="search"
+                className="p-1 ms-2"
+                style={{ border: "1px solid #ced4da", boxShadow: "none", width: "150px" }}
+                value={searchItem}
+                onChange={(e) => setSearchItem(e.target.value)}
+              />
+            )}
           </div>
-          <div className="clickable-icon cart-icon" role="button" tabIndex={0} aria-label="Cart">
-            <FaCartPlus size={25} />
-          </div>
+                 <div className="clickable-icon cart-icon position-relative" role="button" tabIndex={0} aria-label="Cart">
+                <FaCartPlus size={25} />
+                {addCart > 0 && (
+                    <span className="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger" style={{ fontSize: "0.7rem" }}>
+                    {addCart}
+                    </span>
+                )}
+                </div>
         </div>
 
         {/* Hamburger */}
@@ -40,14 +60,12 @@ const NavBarSection = ({ searchItem, setSearchItem }) => {
               <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/shop">Shop</Link>
+              <Link className="nav-link" to="/shop">Fashions</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/men">Mens</Link>
+              <Link className="nav-link" to="/men">All Products</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/women">Womens</Link>
-            </li>
+            
             <li className="nav-item">
               <Link className="nav-link" to="/about">About Us</Link>
             </li>
@@ -57,7 +75,11 @@ const NavBarSection = ({ searchItem, setSearchItem }) => {
           </ul>
         </div>
       </div>
+     
     </nav>
+    {/* <FeatureProductsItems  addCart={addCart}/> */}
+  </>
+    
   );
 };
 
