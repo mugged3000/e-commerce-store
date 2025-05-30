@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoArrowForward } from "react-icons/io5";
-// import  useLocalStorage from '../LocalStorage/LocalData'
+
 const ShopCategory = [
     {
       id: 1,
