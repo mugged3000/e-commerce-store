@@ -111,7 +111,7 @@ const AboutUs = () => {
           </Row>
           <Row>
             {teamMembers.map((member, index) => (
-              <Col md={3} sm={6} className="mb-4  animate__animated animate__fadeIn" key={index}>
+              <Col md={4} sm={6} className="mb-4  animate__animated animate__fadeIn" key={index}>
                 <Card className="border-0 shadow-sm h-100 team-card f-card">
                   <Card.Img variant="top" src={member.image} className="rounded-circle mx-auto mt-3" style={{width: '150px', height: '150px', objectFit: 'cover'}} />
                   <Card.Body className="text-center">
