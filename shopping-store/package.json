@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "rd /s /q dist && rd /s /q node_modules\\.vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

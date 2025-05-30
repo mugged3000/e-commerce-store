@@ -57,7 +57,6 @@ const AboutUs = () => {
                     width: '100%',
                     maxHeight: '500px',
                     objectFit: 'cover',
-                    maxHeight: '700px',
                     height: '100%',
                     borderRadius: '20px'
                 }}
