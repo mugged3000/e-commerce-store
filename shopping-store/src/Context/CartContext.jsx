@@ -25,7 +25,7 @@ export const useCart = () => useContext(CartContext);
     });
   };
    
-  // Remove item from cart
+  
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
