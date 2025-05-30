@@ -1,31 +1,38 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import NavBarSection from './Component/Navbar'
- import FooterSection from './Component/FooterSection'
-import HomeSection from './Pages/Home'
-import ShopSection from './Pages/Shop'
-import MensCategory from './Pages/Mens'
+import NavBarSection from './Component/Navbar';
+import FooterSection from './Component/FooterSection';
+import HomeSection from './Pages/Home';
+import ShopSection from './Pages/Shop';
+import MensCategory from './Pages/Mens';
+import CartProvider from './Context/CartContext';
+import CartPage from './Pages/Carts';
+import ProductDetails from './Component/ProductsDetails'
+import AboutUs from './Pages/About'
+import './App.css';
 
-import './App.css'
-const App =()=>{
-  const [searchItem,setSearchItem] = useState("");
-  const [addCart, setAddCart] = useState(0);
-  return(
-   
-    <>
-     <Router>
-     <NavBarSection searchItem={searchItem} setSearchItem={setSearchItem}  addCart={addCart}/>
-     <Routes>
-       <Route path="/" element={<HomeSection searchItem={searchItem}  addCart={addCart}  setAddCart={setAddCart}/>}/>
-       <Route path="/shop" element={<ShopSection />}/>
-       <Route path="/men" element={<MensCategory />} />
-     </Routes>
-     <FooterSection />
-  </Router>
-    </>
-  )
-}
+const App = () => {
+  const [searchItem, setSearchItem] = useState("");
+ 
+  return (
+    <CartProvider>
+      <Router>
+        <NavBarSection searchItem={searchItem} setSearchItem={setSearchItem} />
+        <Routes>
+          <Route path="/" element={<HomeSection />} />
+          <Route path="/shop" element={<ShopSection />} />
+          <Route path="/men" element={<MensCategory searchItem={searchItem} />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/about" element={<AboutUs />} />
+         
 
-export default App ;
+        </Routes>
+        <FooterSection />
+      </Router>
+    </CartProvider>
+  );
+};
+
+export default App;

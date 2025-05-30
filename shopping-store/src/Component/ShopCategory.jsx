@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoArrowForward } from "react-icons/io5";
+// import  useLocalStorage from '../LocalStorage/LocalData'
 const ShopCategory = [
     {
       id: 1,
@@ -29,18 +30,20 @@ const ShopCategory = [
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {ShopCategory.map((CategoryItem, index) => (
               <div key={index} className="col">
-                <div className="card h-100 overflow-hidden rounded-4" >
-                    <Link to="/">
+                <div className="card h-100 overflow-hidden rounded-4 card-flash" >
+                    <Link to="/shop"  style={{textDecoration:"none",color:"brown"}}>
                   <img src={CategoryItem.image}
                    className="card-img-top" alt="..." 
                    style={{ height: "250px", objectFit: "cover" }}
                     />
-                  </Link>
+                 
                   <div className="card-body">
-                    <h3 className="collectioni">{CategoryItem.collection}</h3>
-                    <h5 className="card-title">{CategoryItem.title} <IoArrowForward /></h5>
+                    <h3 className="collectioni" style={{fontSize:"19px"}}>{CategoryItem.collection}</h3>
+                    <h5 className="card-title" style={{fontSize:"16px"}}>{CategoryItem.title} <IoArrowForward /></h5>
                   </div>
+                  </Link>
                 </div>
+                
               </div>
             ))}
           </div>
