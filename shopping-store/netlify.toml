@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"  # This matches Vite's default output directory
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
