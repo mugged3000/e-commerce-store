@@ -34,6 +34,7 @@ const ShopSection = () => {
     }
   });
 
+ 
   const LocalCategories = [
     { name: 'All Products', value: 'all' },
     { name: 'Mens', value: "men's clothing" },
@@ -76,7 +77,7 @@ const ShopSection = () => {
                 <select
                   className="form-select"
                   value={category}
-                  onChange={(e) => setCategory(e.target.value)}
+                  onChange={(e) =>setCategory(e.target.value)}
                   style={{
                     fontWeight: "bold",
                     padding: "10px",
