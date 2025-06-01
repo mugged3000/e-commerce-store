@@ -43,7 +43,7 @@ const AboutUs = () => {
               <p className="lead mb-4" style={{fontFamily:"sans-serif",fontSize:"17px"}}>
                 Founded in 2015, we started as a small team with a big dream - to revolutionize online shopping by making it more personal, sustainable, and enjoyable.
               </p>
-              <Button variant="light" size="lg" className="rounded-pill px-4">
+              <Button variant="light" size="lg" className="rounded-pill px-4 shop-btn">
                 Shop Now
               </Button>
             </Col>
