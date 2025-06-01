@@ -11,7 +11,7 @@ import CartPage from './Pages/Carts';
 import ProductDetails from './Component/ProductsDetails'
 import AboutUs from './Pages/About'
 import './App.css';
-
+import './WebBeauty/Page.css'
 const App = () => {
   const [searchItem, setSearchItem] = useState("");
  

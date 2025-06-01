@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import FeatureProductsItems from "../Component/FeatureProducts";
 import ShoppingCategory from "../Component/ShopCategory";
 import NewsLetterSection from "../Component/NewsLetter";
-import '../WebBeauty/Page.css'
+
 const HomeSection = () => {
   return (
     <>
