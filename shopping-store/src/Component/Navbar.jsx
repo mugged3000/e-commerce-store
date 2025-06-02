@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaSearch, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useCart } from '../Context/CartContext';
-
+// import { FaBars } from "react-icons/fa";
 const NavBarSection = ({ searchItem, setSearchItem }) => {
   const [showSearchInput, setShowSearchInput] = useState(false);
   const { cartItems } = useCart();
@@ -13,7 +13,7 @@ const NavBarSection = ({ searchItem, setSearchItem }) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div className="container-fluid">
           {/* Brand  */}
           <Link className="navbar-brand logo" to="/" style={{color:"brown"}}>SHOPSTYLE</Link>

@@ -7,7 +7,7 @@ import NewsLetterSection from "../Component/NewsLetter";
 const HomeSection = () => {
   return (
     <>
-      <section className="py-5" style={{ backgroundColor: "#000", color: "#fff" }}>
+      <section className="py-4 " style={{ backgroundColor: "#000", color: "#fff" }}>
         <div className="container-fluid py-5" style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12 mb-lg-0 mb-4">
