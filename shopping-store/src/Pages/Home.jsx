@@ -13,7 +13,7 @@ const HomeSection = () => {
             <div className="col-lg-6 col-md-12 mb-lg-0 mb-4">
               <div className="mugged mb-3">
                 <h5 className="display-4 mt-5 w-100" style={{ fontWeight: "500" }}>
-                  Mugged Collection, 2025👔
+              The Essentials Collection, 2025👔👗👜💍
                 </h5>
               </div>
               <div className="mb-4 w-100">
